@@ -1,0 +1,99 @@
+@import "../variables/_variables";
+
+html {
+    height: 100%;
+  }
+  
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+  }
+
+  .wrapper {
+    width: 1200px;
+    margin: $center;
+    display: flex;
+    justify-content: space-between;
+}
+
+  .hidden {
+    display: none;
+  }
+
+  .btn-cart {
+    
+    @include transitionForButton ();
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    width: 100px;
+    height: 35px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    &:hover {
+      @include btnHover ();
+    }
+    &2 {
+      @include transitionForButton ();
+      width: 120px;
+      &:hover {
+        @include btnHover ();
+      }
+    }
+  }
+
+  .by-btn{
+    @include transitionForButton();
+    width: 200px;
+    height: 44px;
+    background-color: #ffffff;
+    border: 1px solid $pinkColorSecondary;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    color: $pinkColorSecondary;
+    &:hover {
+      background-color: $pinkColorSecondary;
+      color:#ffffff;
+    }
+  }
+
+  header {
+    
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 300px;
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #232323;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .products {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .price {
+    margin-left: 68px;
+    margin-top: 10px;
+  }
+
+  img {
+    width: 263px;
+    height: 281px;
+  }
