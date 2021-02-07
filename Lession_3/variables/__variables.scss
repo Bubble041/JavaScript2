@@ -1,0 +1,43 @@
+$center: 0 auto;
+$textColorGray: #222222;
+$textColorPink: #f16d7f;
+$pinkColorSecondary: #ef5b70;
+@mixin displayAlign {
+    display: flex;
+    align-items: center;
+}
+
+@mixin productsCartForm {
+    height: 45px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    padding-left: 20px;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+@mixin btnHover {
+    background-color: $textColorPink;
+    color: #fff;
+}
+
+@mixin transitionForButton {
+    transition: 0.3s;
+}
+
+@mixin inputForm {
+    width: 390px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #222222;
+    &:focus {
+        outline: none;
+    }
+}
