@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        input {
+            height: 20px;
+        }
+        #btn {
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 100px;
+            width: 100px;
+            height: 35px;
+            background-color: #ffffff;
+            border: 1px solid #eaeaea;
+            font-size: 11px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #4a4a4a;
+        }
+
+        #btn:hover{
+            background-color: #f16d7f;
+            color: #fff;
+            border-color: #fafafa;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        .valid {
+            border: 2px solid green;
+        }
+
+        .invalid {
+            border: 2px solid red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form action="#" id="form-container">
+        <label>
+            <p>Введите ваше имя:</p>
+            <input type="text" name="name" id="name">
+        </label>
+        <label>
+            <p>Введите ваш телефон:</p>
+            <input type="tel" name="phone" id="phone">
+        </label>
+        <label>
+            <p>Введите ваш email:</p>
+            <input type="email" name="email" id="email">
+        </label>
+        <p>Комментарий <br>
+            <textarea name="comment"></textarea>
+        </p>
+        <button id="btn">Отправить</button>
+    </form>
+    <script src="main.js"></script>
+    <script>
+        // слушатель события клика кнопки
+        // в случае успешного выполнения всех операций внутри класса, вернёт форму к исходному состоянию
+        window.onload = () => {
+            document.getElementById('form-container').addEventListener('submit', e => {
+                const valid = new Validator('form-container');
+                if(valid.valid){
+                    e.preventDefault();
+                }
+            })
+        }
+    </script>
+</body>
+</html>
